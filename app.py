@@ -1,6 +1,7 @@
 # from crypt import methods
 from re import TEMPLATE
 from flask import Flask, render_template, request
+from transliterate import TransliterateLanguage
 
 from indic_transliteration import sanscript
 from indic_transliteration.sanscript import transliterate
@@ -13,7 +14,8 @@ def getData():
     if request.method == "POST":
         if len(str(request.form["data"])):
             original_text = request.form["data"]
-            data = transliterate(original_text, sanscript.DEVANAGARI, sanscript.ITRANS)
+            language=request.form["language"]
+            data=TransliterateLanguage(language,original_text).convertTo()
         else:
             print("form is empty")
     return render_template('index.html', data=data)
