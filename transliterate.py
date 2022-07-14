@@ -10,10 +10,10 @@ class TransliterateLanguage:
             "Kannada": sanscript.KANNADA,
             "Bengali": sanscript.BENGALI,
             #"Gurmukhi": sanscript.GURMUKHI,
-            "malayalam": sanscript.MALAYALAM,
-            "oriya": sanscript.ORIYA,
-            "tamil": sanscript.TAMIL,
-            "telugu": sanscript.TELUGU,
+            "Malayalam": sanscript.MALAYALAM,
+            "Oriya": sanscript.ORIYA,
+            "Tamil": sanscript.TAMIL,
+            "Telugu": sanscript.TELUGU,
         }
         self.original_text=original_text
     
